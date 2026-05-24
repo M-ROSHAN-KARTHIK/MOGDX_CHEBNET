@@ -27,3 +27,6 @@ Build an intelligent healthcare prediction system
 Explore graph neural networks in medical applications
 Improve diagnostic accuracy using graph-based learning
 Visualize and analyze patient-related data effectively
+
+Author
+Updated with Chebnet in Mogdx by M ROSHAN KARTHIK
