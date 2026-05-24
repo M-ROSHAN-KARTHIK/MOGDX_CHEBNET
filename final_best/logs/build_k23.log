@@ -1,0 +1,51 @@
+
+================================================================================
+STEP 1: BUILDING PATIENT-SIMILARITY GRAPHS
+================================================================================
+Modalities        : ['mRNA', 'miRNA', 'CNV', 'RPPA']
+Target            : PAM50Call_RNAseq
+Similarity method : bicorr
+k values          : [23]
+
+--------------------------------------------------------------------------------
+[1/1] Building graphs for k = 23
+--------------------------------------------------------------------------------
+  -> Loading modality 1/4: mRNA
+     Samples: 435 | Features: 20207 | Selected feats: 2089
+     Building kNN graph for mRNA with k=23 ...
+     Saved Networks/mRNA_graph_k23.graphml | Nodes: 435 | Edges: 7297
+  -> Loading modality 2/4: miRNA
+     Samples: 435 | Features: 696 | Selected feats: 88
+     Building kNN graph for miRNA with k=23 ...
+     Saved Networks/miRNA_graph_k23.graphml | Nodes: 435 | Edges: 6689
+  -> Loading modality 3/4: CNV
+     Samples: 435 | Features: 24776 | Selected feats: 6110
+     Building kNN graph for CNV with k=23 ...
+     Saved Networks/CNV_graph_k23.graphml | Nodes: 435 | Edges: 7119
+  -> Loading modality 4/4: RPPA
+     Samples: 435 | Features: 280 | Selected feats: 60
+     Building kNN graph for RPPA with k=23 ...
+     Saved Networks/RPPA_graph_k23.graphml | Nodes: 435 | Edges: 6856
+  -> Aligning patients across modality-specific graphs ...
+     Unique patients across graphs: 435
+  -> Converting graph to adjacency matrix: mRNA
+  -> Converting graph to adjacency matrix: miRNA
+  -> Converting graph to adjacency matrix: CNV
+  -> Converting graph to adjacency matrix: RPPA
+  -> Running SNF fusion for k=23 ...
+  -> Saved fused graph: Networks/CNV_RPPA_mRNA_miRNA_graph_k23.graphml
+     Fused graph stats | Nodes: 435 | Edges: 5830 | Avg degree: 26.8
+     Time for k=23: 3.87 seconds
+
+================================================================================
+GRAPH BUILDING FINISHED
+================================================================================
+Saved CSV  : results/patient_similarity_graph_summary.csv
+Saved plot : results/plots/patient_similarity_graph_summary.png
+Saved plot : results/plots/patient_similarity_avg_degree.png
+Saved log  : results/logs/build_patient_similarity_graphs.log
+Total time : 4.07 seconds
+
+Summary:
+ k                                    fused_graph  nodes  edges  avg_degree  seconds
+23 Networks/CNV_RPPA_mRNA_miRNA_graph_k23.graphml    435   5830        26.8     3.87

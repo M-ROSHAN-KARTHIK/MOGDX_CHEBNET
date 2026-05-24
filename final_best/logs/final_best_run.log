@@ -1,0 +1,73 @@
+
+================================================================================
+STEP 2: K SEARCH WITH CHEBNET
+================================================================================
+Candidate k values: [23]
+
+--------------------------------------------------------------------------------
+Running k-search for k = 23
+Graph path: Networks/CNV_RPPA_mRNA_miRNA_graph_k23.graphml
+--------------------------------------------------------------------------------
+  Loaded mRNA: (435, 20207)
+  Loaded miRNA: (435, 696)
+  Loaded CNV: (435, 24776)
+  Loaded RPPA: (435, 280)
+  Fold 1/5 for k=23
+    Epoch 001/060 | Loss=1.5574 | TrainAcc=0.1494
+    Epoch 010/060 | Loss=0.4403 | TrainAcc=0.8592
+    Epoch 020/060 | Loss=0.2959 | TrainAcc=0.8822
+    Epoch 030/060 | Loss=0.2206 | TrainAcc=0.9080
+    Epoch 040/060 | Loss=0.1644 | TrainAcc=0.9397
+    Epoch 050/060 | Loss=0.1197 | TrainAcc=0.9655
+    Epoch 060/060 | Loss=0.0661 | TrainAcc=0.9828
+    Fold 1 done | Acc=0.9310 | F1=0.9307
+  Fold 2/5 for k=23
+    Epoch 001/060 | Loss=1.5690 | TrainAcc=0.1868
+    Epoch 010/060 | Loss=0.5066 | TrainAcc=0.8793
+    Epoch 020/060 | Loss=0.3008 | TrainAcc=0.9138
+    Epoch 030/060 | Loss=0.1732 | TrainAcc=0.9655
+    Epoch 040/060 | Loss=0.1267 | TrainAcc=0.9684
+    Epoch 050/060 | Loss=0.0830 | TrainAcc=0.9799
+    Epoch 060/060 | Loss=0.0409 | TrainAcc=0.9971
+    Fold 2 done | Acc=0.8851 | F1=0.8794
+  Fold 3/5 for k=23
+    Epoch 001/060 | Loss=1.5375 | TrainAcc=0.1379
+    Epoch 010/060 | Loss=0.4475 | TrainAcc=0.8621
+    Epoch 020/060 | Loss=0.2834 | TrainAcc=0.9224
+    Epoch 030/060 | Loss=0.1874 | TrainAcc=0.9397
+    Epoch 040/060 | Loss=0.1311 | TrainAcc=0.9626
+    Epoch 050/060 | Loss=0.0871 | TrainAcc=0.9799
+    Epoch 060/060 | Loss=0.0486 | TrainAcc=0.9943
+    Fold 3 done | Acc=0.8276 | F1=0.8327
+  Fold 4/5 for k=23
+    Epoch 001/060 | Loss=1.4012 | TrainAcc=0.2902
+    Epoch 010/060 | Loss=0.4540 | TrainAcc=0.8563
+    Epoch 020/060 | Loss=0.3018 | TrainAcc=0.8793
+    Epoch 030/060 | Loss=0.2178 | TrainAcc=0.9253
+    Epoch 040/060 | Loss=0.1204 | TrainAcc=0.9655
+    Epoch 050/060 | Loss=0.0725 | TrainAcc=0.9885
+    Epoch 060/060 | Loss=0.0484 | TrainAcc=0.9885
+    Fold 4 done | Acc=0.9080 | F1=0.9033
+  Fold 5/5 for k=23
+    Epoch 001/060 | Loss=1.3282 | TrainAcc=0.4224
+    Epoch 010/060 | Loss=0.3604 | TrainAcc=0.8879
+    Epoch 020/060 | Loss=0.2255 | TrainAcc=0.9167
+    Epoch 030/060 | Loss=0.1539 | TrainAcc=0.9511
+    Epoch 040/060 | Loss=0.0991 | TrainAcc=0.9713
+    Epoch 050/060 | Loss=0.0658 | TrainAcc=0.9856
+    Epoch 060/060 | Loss=0.0377 | TrainAcc=0.9914
+    Fold 5 done | Acc=0.8046 | F1=0.8062
+[23] COMPLETE | MeanAcc=0.8713 | MeanF1=0.8705 | Time=549.41s
+
+ChebNet K Search Results:
+ k  Mean_Acc  Mean_F1  Seconds
+23    0.8713   0.8705   549.41
+
+Best k = 23 | Accuracy = 0.8713 | F1 = 0.8705
+
+Saved:
+- results/k_search_chebnet_results.csv
+- results/best_k.txt
+- results/plots/k_search_chebnet_scores.png
+- results/plots/k14_fold_loss_curves.png, k15_fold_loss_curves.png, k21_fold_loss_curves.png
+- results/logs/k_search_chebnet.log
